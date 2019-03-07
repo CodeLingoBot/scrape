@@ -147,7 +147,7 @@ func findAllInternal(node *html.Node, matcher Matcher, searchNested bool) []*htm
 	return matched
 }
 
-// Find returns the first node which matches the matcher using next sibling search.
+// FindNextSibling: Find returns the first node which matches the matcher using next sibling search.
 // If no node is found, ok will be false.
 //
 //     root, err := html.Parse(resp.Body)
@@ -168,7 +168,7 @@ func FindNextSibling(node *html.Node, matcher Matcher) (n *html.Node, ok bool) {
 	return nil, false
 }
 
-// Find returns the first node which matches the matcher using previous sibling search.
+// FindPrevSibling: Find returns the first node which matches the matcher using previous sibling search.
 // If no node is found, ok will be false.
 //
 //     root, err := html.Parse(resp.Body)
